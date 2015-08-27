@@ -41,7 +41,7 @@ static MoreGamers *mgInstance;
     if(mgWebView) {
         CFAbsoluteTime now = CFAbsoluteTimeGetCurrent();
         if(now - lastRequest > 60) {
-            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://app.moregamers.com/ad/frame?id=%d&sdk=ios", mgId]];
+            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://app.moregamers.com/ad/frame?id=%d&sdk=ios", mgId]];
             NSURLRequest *request = [NSURLRequest requestWithURL:url];
             [mgWebView loadRequest:request];
             lastRequest = now;
